@@ -1,26 +1,19 @@
-import array
-
-
+terms = int(input("Enter the terms "))
 a = 0
-ndlast = 1
-last = 1
-temp = 0
-i=0
-fablist = [0]
-w=int(input("enter the number of times you want the iterations to occur : "))
-for i in range(w):
-    a=last + ndlast
+b = 1
+count = 0
+limit=0
+if (terms <= 0):
+    print("Please enter a valid integer")
+elif (terms == 1):
+    print("Fibonacci sequence upto", limit, ":")
     print(a)
-    fablist[i] = a
+else:
+    print("Fibonacci sequence:")
+    while (count < terms):
+        print(a, end=' ')
+        c = a + b
+        a = b
+        b = c
 
-    temp = ndlast
-    ndlast = last
-    last = fablist[i]
-
-for i in fablist:
-    print(i)
-
-
-
-
-
+        count += 1
